@@ -5,7 +5,7 @@ networks:
       name: nat
 services:
   malos-dotnet-container:
-    image: gcr.io/admobilize-testing/malos-dotnet
+    image: gcr.io/admobilize-testing/admobilize-matrix-windows
     command: powershell C:/code/build.ps1
     platform: windows
     volumes:
