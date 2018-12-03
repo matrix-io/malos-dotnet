@@ -1,0 +1,14 @@
+version: '2.4'
+networks:
+  default:
+    external:
+      name: nat
+services:
+  malos-dotnet-container:
+    image: gcr.io/admobilize-testing/malos-dotnet
+    command: powershell C:/code/build.ps1
+    platform: windows
+    volumes:
+      - type: bind
+        source: ./
+        target: C:\code
