@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>    
+    <id>matrix-io-malos</id>
+    <version>0.0.1</version>
+    <title>MATRIX Labs MALOS library</title>
+    <authors>MATRIX Labs</authors>
+    <owners>MATRIX Labs</owners>
+    <projectUrl>https://github.com/matrix-io/malos-dotnet</projectUrl>
+    <iconUrl>https://www.matrix.one/assets/imgs/everloop.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple .Net driver for communicating with MATRIX-MALOS services.</description>
+    <copyright>2018 © MATRIX - All rights reserved</copyright>
+    <tags>matrix malos</tags>
+    <dependencies>
+      <dependency id="matrix-io-proto" version="0.0.4"  />
+    </dependencies>
+  </metadata>
+</package>
