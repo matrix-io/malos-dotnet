@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "matrix-io-malos", "matrix-io-malos\matrix-io-malos.csproj", "{F63BECFC-85B4-4832-8302-1CBBA2C63F0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example", "example\example.csproj", "{A457BA6A-7291-4D59-8420-692C1D29B022}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F63BECFC-85B4-4832-8302-1CBBA2C63F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F63BECFC-85B4-4832-8302-1CBBA2C63F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F63BECFC-85B4-4832-8302-1CBBA2C63F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A457BA6A-7291-4D59-8420-692C1D29B022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A457BA6A-7291-4D59-8420-692C1D29B022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A457BA6A-7291-4D59-8420-692C1D29B022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A457BA6A-7291-4D59-8420-692C1D29B022}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
