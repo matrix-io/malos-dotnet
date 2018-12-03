@@ -33,6 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AppData\Roaming\NuGet\Build\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="matrix-io-proto, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AppData\Roaming\NuGet\Build\matrix-io-proto.0.0.4\lib\net45\matrix-io-proto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,17 +58,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\matrix-io-malos\matrix-io-malos.csproj">
       <Project>{f63becfc-85b4-4832-8302-1cbba2c63f0b}</Project>
       <Name>matrix-io-malos</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="matrix-io-proto">
-      <Version>0.0.4</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
