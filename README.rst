@@ -126,6 +126,84 @@ if you convert the VisionResult to a Json you will have an object like the follo
         "uuid": "945968ad-aa9f-48ea-b57b-75c5b50081ce"
     }
 
+VisionResult
+============
+
+This message organizes (at least) four components:
+- Detections (faces, hands, cars).
+- Tracking information.
+- Recognition (gender, age, emotion).
+- Events (New face in video, face leaves video, gesture starts).
+
+**rectDetection**
+Results of all the rectangular detectors.
+Each detecion also stores the recognitions that can be done inside of this rectangle. For instance, for faces the available recognitions are (age, gender, emotion).
+
+**visionEvent**
+Vision events. For instance, tracking events (start, end).
+This message is not inside rect_detection because some events will happen when the detection is no longer available, for instance: TRACKING_END.
+
+**uuid**
+UUID (v4) that uniquely identifies each vision result
+
+RectangularDetection
+====================
+Result of a rectangle detector.
+
+**facialRecognition**
+Facial recognitions for this detection (age, gender, pose, features, etc).
+
+**tag**
+What kind of detections the rectangle contains.
+
+**trackingId**
+Tracking id for this detection.
+
+**uuid**
+UUID (v4) identifies this unique rectangular detection
+
+
+FacialRecognition
+=================
+
+**The following fields should only be present when the tag HAS_AGE tag is set.**
+**age**
+Detected age.
+
+**The following fields should only be present when the tag HAS_GENDER is set.**
+**gender**
+Detected gender, genders available for detections are MALE, FEAMLE.
+
+**The following fields should only be present when the tag HAS_EMOTION is set.**
+**emotion**
+Detected emotion, emotions available for detections are ANGRY, DISGUST, CONFUSED, HAPPY, SAD, SURPRISED, CALM, FEAR, NEUTRAL.
+
+**The following fields should only be present when the tag HAS_HEAD_POSE is set.**
+**poseYaw**
+Face yaw.
+
+**poseRoll**
+Face roll.
+
+**posePitch**
+Face pitch.
+
+**isLooking**
+Face looking.
+
+
+VisionEvent
+===========
+
+**tag**
+Tag for events. The fields below will make sense for a specific tag. for face will be TRACKING_START or TRACKING_END
+
+**trackingId**
+Object identifier.
+
+**dwellTime**
+Dwell time: Amount of seconds facing the camera. Used for TRACKING_END event.
+
 
 Who can answer questions about this library?
 ============================================
