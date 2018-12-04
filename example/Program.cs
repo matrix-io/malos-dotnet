@@ -12,7 +12,7 @@ namespace example
 
         static void Main(string[] args)
         {
-            // Initialize the drive for malos vision.
+            // Initialize the driver for malos vision.
             driver = new matrix_io_malos.Driver("127.0.0.1", matrix_io_malos.BasePort.Vision);
 
             // Add the event handler to receive the data events.
