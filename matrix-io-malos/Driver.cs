@@ -36,6 +36,9 @@ namespace matrix_io_malos
 
         private string address;
         private int basePort;
+        private bool getStatusRunning = false;
+        private bool getDataRunning = false;
+        private bool keepAliveRunning = false;
 
         /// <summary>
         /// Constructor
@@ -100,12 +103,13 @@ namespace matrix_io_malos
         /// <param name="timeout">how long to wait for pongs before timeout in seconds</param>
         public void startKeepAlive(int delay = 5, int timeout = 5)
         {
+            keepAliveRunning = true;
             using (var context = new ZContext())
             using (var socket = new ZSocket(context, ZSocketType.REQ))
             {
                 socket.Connect(String.Format("tcp://{0}:{1}", address, (basePort + 1)));
                 socket.SetOption(ZSocketOption.RCVTIMEO, (timeout * 1000));
-                while (true)
+                while (keepAliveRunning)
                 {
                     socket.Send(new ZFrame(""));
                     using (ZFrame reply = socket.ReceiveFrame())
@@ -118,11 +122,20 @@ namespace matrix_io_malos
         }
 
         /// <summary>
+        /// Stops the keep alive socket.
+        /// </summary>
+        public void stopKeepAlive()
+        {
+            keepAliveRunning = false;
+        }
+
+        /// <summary>
         /// Connects to the corresponding status port (base_port +2) given the desired
         /// basePort and raise an onGetSatus event.
         /// </summary>
         public void getStatus()
         {
+            getStatusRunning = true;
             using (var context = new ZContext())
             using (var socket = new ZSocket(context, ZSocketType.SUB))
             {
@@ -132,7 +145,7 @@ namespace matrix_io_malos
                 {
                     try
                     {
-                        while (true)
+                        while (getStatusRunning)
                         {
                             using (ZFrame data = socket.ReceiveFrame())
                             {
@@ -157,11 +170,20 @@ namespace matrix_io_malos
         }
 
         /// <summary>
+        /// Stops the events to get status.
+        /// </summary>
+        public void stopGetStatus()
+        {
+            getStatusRunning = false;
+        }
+
+        /// <summary>
         /// Connects to the corresponding data port (base_port +3) and raise
         /// an onGetData event with the messages received through it.
         /// </summary>
         public void getData()
         {
+            getDataRunning = true;
             using (var context = new ZContext())
             using (var socket = new ZSocket(context, ZSocketType.SUB))
             {
@@ -169,7 +191,7 @@ namespace matrix_io_malos
                 socket.Subscribe("");
                 try
                 {
-                    while (true)
+                    while (getDataRunning)
                     {
                         using (ZFrame data = socket.ReceiveFrame())
                         {
@@ -188,6 +210,14 @@ namespace matrix_io_malos
                     socket.Close();
                 }
             }
+        }
+
+        /// <summary>
+        /// Stops the events to get data.
+        /// </summary>
+        public void stopGetData()
+        {
+            getDataRunning = false;
         }
     }
 }
