@@ -135,32 +135,23 @@ This message organizes (at least) four components:
 - Recognition (gender, age, emotion).
 - Events (New face in video, face leaves video, gesture starts).
 
-**rectDetection**
-Results of all the rectangular detectors.
-Each detecion also stores the recognitions that can be done inside of this rectangle. For instance, for faces the available recognitions are (age, gender, emotion).
+- **rectDetection** Results of all the rectangular detectors. Each detecion also stores the recognitions that can be done inside of this rectangle. For instance, for faces the available recognitions are (age, gender, emotion).
 
-**visionEvent**
-Vision events. For instance, tracking events (start, end).
-This message is not inside rect_detection because some events will happen when the detection is no longer available, for instance: TRACKING_END.
+- **visionEvent** Vision events. For instance, tracking events (start, end). This message is not inside rect_detection because some events will happen when the detection is no longer available, for instance: TRACKING_END.
 
-**uuid**
-UUID (v4) that uniquely identifies each vision result
+- **uuid** UUID (v4) that uniquely identifies each vision result
 
 RectangularDetection
 ====================
 Result of a rectangle detector.
 
-**facialRecognition**
-Facial recognitions for this detection (age, gender, pose, features, etc).
+- **facialRecognition** Facial recognitions for this detection (age, gender, pose, features, etc).
 
-**tag**
-What kind of detections the rectangle contains.
+- **tag** What kind of detections the rectangle contains.
 
-**trackingId**
-Tracking id for this detection.
+- **trackingId** Tracking id for this detection.
 
-**uuid**
-UUID (v4) identifies this unique rectangular detection
+- **uuid** UUID (v4) identifies this unique rectangular detection
 
 
 FacialRecognition
@@ -192,14 +183,11 @@ FacialRecognition
 VisionEvent
 ===========
 
-**tag**
-Tag for events. The fields below will make sense for a specific tag. for face will be TRACKING_START or TRACKING_END
+- **tag** Tag for events. The fields below will make sense for a specific tag. for face will be TRACKING_START or TRACKING_END
 
-**trackingId**
-Object identifier.
+- **trackingId** Object identifier.
 
-**dwellTime**
-Dwell time: Amount of seconds facing the camera. Used for TRACKING_END event.
+- **dwellTime** Dwell time: Amount of seconds facing the camera. Used for TRACKING_END event.
 
 
 Who can answer questions about this library?
