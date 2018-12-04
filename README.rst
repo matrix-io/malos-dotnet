@@ -166,33 +166,33 @@ UUID (v4) identifies this unique rectangular detection
 FacialRecognition
 =================
 
-- The following fields should only be present when the tag HAS_AGE tag is set.
+**The following fields should only be present when the tag HAS_AGE tag is set.**
 
-**age**
+- **age**
 Detected age.
 
-- The following fields should only be present when the tag HAS_GENDER is set.
+**The following fields should only be present when the tag HAS_GENDER is set.**
 
-**gender**
+- **gender**
 Detected gender, genders available for detections are MALE, FEAMLE.
 
-- The following fields should only be present when the tag HAS_EMOTION is set.
+**The following fields should only be present when the tag HAS_EMOTION is set.**
 
-**emotion**
+- **emotion**
 Detected emotion, emotions available for detections are ANGRY, DISGUST, CONFUSED, HAPPY, SAD, SURPRISED, CALM, FEAR, NEUTRAL.
 
-- The following fields should only be present when the tag HAS_HEAD_POSE is set.
+**The following fields should only be present when the tag HAS_HEAD_POSE is set.**
 
-**poseYaw**
+- **poseYaw**
 Face yaw.
 
-**poseRoll**
+- **poseRoll**
 Face roll.
 
-**posePitch**
+- **posePitch**
 Face pitch.
 
-**isLooking**
+- **isLooking**
 Face looking.
 
 
