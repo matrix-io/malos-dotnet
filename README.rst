@@ -15,7 +15,7 @@ The package is available on NuGet, so you can easily install via NuGet:
 
 .. code-block:: console
 
-    PM> Install-Package matrix-io-proto
+    PM> Install-Package matrix-io-malos
 
 
 Using the MalosDriver
