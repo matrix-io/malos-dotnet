@@ -1,7 +1,7 @@
 ============================
 MATRIXIO .Net MALOS Driver
 ============================
-A simple .Net based driver for communicating with `MATRIX-MALOS services`_.
+A simple .Net driver for communicating with `MATRIX-MALOS services`_.
 
 License
 =======
