@@ -14,6 +14,7 @@
     <tags>matrix malos</tags>
     <dependencies>
       <dependency id="matrix-io-proto" version="0.0.4"  />
+      <dependency id="ZeroMQ" version="4.1.0.26"  />
     </dependencies>
   </metadata>
 </package>
