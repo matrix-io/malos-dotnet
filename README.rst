@@ -1,3 +1,7 @@
+.. image:: https://img.shields.io/nuget/v/matrix-io-malos.svg?style=flat-square
+    :target: https://www.nuget.org/packages/matrix-io-malos/
+.. image:: https://admobilize.visualstudio.com/MATRIX/_apis/build/status/matrix-io-malos
+    :target: https://admobilize.visualstudio.com/MATRIX/_build/latest?definitionId=35
 ============================
 MATRIXIO .Net MALOS Driver
 ============================
