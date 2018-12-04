@@ -21,7 +21,7 @@ The package is available on NuGet, so you can easily install via NuGet:
 Using the MalosDriver
 =====================
 
-To use the MALOS driver works in your code 
+To use the MALOS driver in your code 
 you can do the following:
 
 .. code-block:: c#
