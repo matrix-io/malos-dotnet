@@ -64,6 +64,69 @@ you can do the following:
         }
     }
 
+MALOS Vision data
+=====================
+On each onGetData event you will receive a byte array data that you can parse to a VisionResult object.
+if you convert the VisionResult to a Json you will have an object like the follow
+
+.. code-block:: json
+
+    {
+        "rectDetection": [{
+            "facialRecognition": [{
+                "tag": "FACE_ID",
+                "faceId": "1543956668-1505437196092-26970"
+            }, {
+                "tag": "AGE",
+                "age": 38
+            }, {
+                "tag": "EMOTION",
+                "emotion": "NEUTRAL"
+            }, {
+                "tag": "GENDER",
+                "gender": "MALE"
+            }, {
+                "tag": "HEAD_POSE",
+                "poseYaw": 0.0326323733,
+                "posePitch": -0.0489135,
+                "isLooking": true
+            }],
+            "trackingId": "219",
+            "uuid": "30a5dbce-c27a-46d7-8334-2d7a60d427bb"
+        }, {
+            "facialRecognition": [{
+                "tag": "FACE_ID",
+                "faceId": "1543956673-1505449935887-18600"
+            }, {
+                "tag": "AGE",
+                "age": 34
+            }, {
+                "tag": "EMOTION",
+                "emotion": "SAD"
+            }, {
+                "tag": "GENDER",
+                "gender": "MALE"
+            }, {
+                "tag": "HEAD_POSE",
+                "poseYaw": 0.0282833464,
+                "poseRoll": 0.05874507,
+                "posePitch": 0.19542487
+            }],
+            "trackingId": "225",
+            "uuid": "6465747a-3d69-40dd-b59f-dd51c9ebf526"
+        }],
+        "visionEvent": [{
+            "tag": "TRACKING_END",
+            "trackingId": "219",
+            "dwellTime": 1.47886264
+        }, {
+            "tag": "TRACKING_START",
+            "trackingId": "225"
+        }],
+        "uuid": "945968ad-aa9f-48ea-b57b-75c5b50081ce"
+    }
+
+
 Who can answer questions about this library?
 ============================================
 
