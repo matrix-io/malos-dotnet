@@ -13,7 +13,7 @@
     <copyright>2018 © MATRIX - All rights reserved</copyright>
     <tags>matrix malos</tags>
     <dependencies>
-      <dependency id="matrix-io-proto" version="0.0.4"  />
+      <dependency id="matrix-io-proto" version="1.0.53863"  />
       <dependency id="ZeroMQ" version="4.1.0.26"  />
     </dependencies>
   </metadata>
